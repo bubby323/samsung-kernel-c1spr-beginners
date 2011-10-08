@@ -4,22 +4,22 @@
 FOLDER=stock
 
 # The initramfs source path.
-INITRAMFSDIR=/home/$LOGNAME/SPH-D710-kernel/initramfs/$FOLDER/
+INITRAMFSDIR=/home/$LOGNAME/samsung-kernel-c1spr/initramfs/$FOLDER/
 
 # Change directories to the initramfs directory.
-cd /home/$LOGNAME/SPH-D710-kernel/initramfs/$FOLDER/
+cd /home/$LOGNAME/samsung-kernel-c1spr/initramfs/$FOLDER/
 
 # Remove the hidden git files if they are in the directory.
 rm -rf .git/
 
 # Change directory to the kernel source.
-cd /home/$LOGNAME/SPH-D710-kernel/source/SPH-D710/
+cd /home/$LOGNAME/samsung-kernel-c1spr/source/SPH-D710/
 
 # Tell the compiler we are building for arm.
 export ARCH=arm
 
 # Export to where the cross compiler is.
-export CROSS_COMPILE=/home/$LOGNAME/SPH-D710-kernel/toolchain/arm-eabi-4.4.0/bin/arm-eabi-
+export CROSS_COMPILE=/home/$LOGNAME/samsung-kernel-c1spr/toolchain/arm-eabi-4.4.0/bin/arm-eabi-
 
 # Triple make sure the build directory is clean.
 make distclean
